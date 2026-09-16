@@ -14,12 +14,12 @@ public class Carga {
         this.categoria = categoria;
         this.pesoKg = pesoKg;
         this.valorSeguro = valorSeguro;
-        // Validação Fail-Fast RN01
+        //---- Validação Fail-Fast RN01 ----
         if (codigoRastreio == null || codigoRastreio.trim().isEmpty()){
             throw new IllegalArgumentException("Codigo de rastreio da carga nao pode ser nulo ou vazio");
         }
     }
-    //Getters e setters
+    //---- Getters e setters ----
     public String getCodigoRastreio() {
         return codigoRastreio;
     }
@@ -48,7 +48,7 @@ public class Carga {
         this.valorSeguro = valorSeguro;
     }
 
-    // validador de objetos iguais de acordo com o codigo de rastreio RN03
+    //---- validador de objetos iguais de acordo com o codigo de rastreio RN03 ----
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -72,7 +72,7 @@ public class Carga {
             return false;
         return true;
     }
-    //Sobreescrica no toString
+    //---- Sobreescrica no toString ----
     @Override
     public String toString() {
         return "Carga [rastreio=" + codigoRastreio + ", categoria=" + categoria + ", peso=" + pesoKg

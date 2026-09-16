@@ -15,17 +15,16 @@ public class ModuloCarga {
         this.codigoModulo = codigoModulo;
         this.capacidadeMaxima = capacidadeMaxima;
     }
-    //RN02
+    //---- RN02 ----
     public void CarregarCarga(Carga carga) throws CapacidadeExcedidaException {
         if (cargas.size() >= capacidadeMaxima) {
             throw new CapacidadeExcedidaException(
-                    "Modulo '" + codigoModulo + "' atingiu a capacidade maxima de "
-                            + capacidadeMaxima + " cargas.");
+                    "Modulo '" + codigoModulo + "' atingiu a capacidade maxima de " + capacidadeMaxima + " cargas.");
         }
         cargas.add(carga);
     }
     
-    // RN05
+    //---- RN05 ----
     public double calcularSeguroTotal() {
         return cargas.stream()
                 .mapToDouble(Carga::getValorSeguro)
@@ -47,7 +46,7 @@ public class ModuloCarga {
     }
 
 
-    //Getters
+    //---- Getters ----
 
     public String getCodigoModulo() {
         return codigoModulo;

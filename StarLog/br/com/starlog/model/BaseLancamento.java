@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class BaseLancamento {
-    // RN04
+    //---- RN04 ----
     private Map<String, ModuloCarga> modulos = new HashMap<>();
 
     public void cadastrarModulo(ModuloCarga modulo) {
